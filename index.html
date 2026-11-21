@@ -1,0 +1,1950 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>RVSF Seven Star – Registered Vehicle Scrapping Facility</title>
+    <meta name="description"
+        content="Purani gaadi scrap karao legal tareeke se. Free vehicle pickup, eco-friendly disposal aur government approved scrapping certificate. Call 9926856000.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #f6faf7;
+            --surface: #fff;
+            --text: #1c2a24;
+            --muted: #5b6b63;
+            --line: #e0ebe4;
+            --green: #16a34a;
+            --green-d: #0f7a37;
+            --navy: #0b2a4a;
+            --gold: #f5b301;
+            --wa: #25d366;
+            --shadow: 0 10px 30px rgba(11, 42, 74, .08);
+            box-sizing: border-box;
+            padding-top: env(safe-area-inset-top, 0px);
+            padding-bottom: env(safe-area-inset-bottom, 0px)
+        }
+
+        @media (prefers-color-scheme:dark) {
+            :root:not([data-theme="light"]) {
+                --bg: #0b1511;
+                --surface: #12211a;
+                --text: #e8f2ec;
+                --muted: #9bb0a5;
+                --line: #21352b;
+                --shadow: 0 10px 30px rgba(0, 0, 0, .35)
+            }
+        }
+
+        :root[data-theme="dark"] {
+            --bg: #0b1511;
+            --surface: #12211a;
+            --text: #e8f2ec;
+            --muted: #9bb0a5;
+            --line: #21352b;
+            --shadow: 0 10px 30px rgba(0, 0, 0, .35)
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: calc(76px + env(safe-area-inset-top, 0px))
+        }
+
+        body {
+            margin: 0;
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+            font-weight: 400;
+            line-height: 1.65;
+            font-size: 16px;
+            -webkit-font-smoothing: antialiased
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-weight: 600;
+            line-height: 1.25;
+            margin: 0
+        }
+
+        p {
+            margin: 0
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none
+        }
+
+        .i {
+            width: 1.15em;
+            height: 1.15em;
+            stroke: currentColor;
+            fill: none;
+            stroke-width: 1.8;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            flex: none
+        }
+
+        .wrap {
+            width: min(1120px, 100% - 2.5rem);
+            margin-inline: auto
+        }
+
+        section {
+            padding: 4.5rem 0
+        }
+
+        .tag {
+            display: inline-flex;
+            align-items: center;
+            gap: .5rem;
+            font-size: .82rem;
+            font-weight: 500;
+            color: var(--green-d);
+            background: rgba(22, 163, 74, .12);
+            padding: .35rem .85rem;
+            border-radius: 99px
+        }
+
+        @media (prefers-color-scheme:dark) {
+            :root:not([data-theme="light"]) .tag {
+                color: #6ee7a0
+            }
+        }
+
+        .sec-head {
+            text-align: center;
+            max-width: 640px;
+            margin: 0 auto 2.8rem
+        }
+
+        .sec-head h2 {
+            font-size: clamp(1.6rem, 3.6vw, 2.2rem);
+            margin: .9rem 0 .6rem
+        }
+
+        .sec-head p {
+            color: var(--muted)
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: .55rem;
+            padding: .8rem 1.4rem;
+            border-radius: 12px;
+            font: 500 .98rem 'Poppins', sans-serif;
+            border: 0;
+            cursor: pointer;
+            transition: transform .2s, box-shadow .2s, background .2s
+        }
+
+        .btn:hover {
+            transform: translateY(-2px)
+        }
+
+        .btn-call {
+            background: var(--gold);
+            color: #2a2000;
+            box-shadow: 0 8px 20px rgba(245, 179, 1, .3)
+        }
+
+        .btn-wa {
+            background: var(--wa);
+            color: #05361a;
+            box-shadow: 0 8px 20px rgba(37, 211, 102, .3)
+        }
+
+        .btn-ghost {
+            background: rgba(255, 255, 255, .12);
+            color: #fff;
+            border: 1px solid rgba(255, 255, 255, .3)
+        }
+
+        /* header */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            background: color-mix(in srgb, var(--surface) 88%, transparent);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--line);
+            padding-top: env(safe-area-inset-top, 0px)
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 68px
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: .65rem;
+            font-weight: 600;
+            font-size: 1.1rem
+        }
+
+        .logo-badge {
+            width: 38px;
+            height: 38px;
+            border-radius: 11px;
+            background: linear-gradient(135deg, var(--green), var(--navy));
+            display: grid;
+            place-items: center;
+            color: #fff
+        }
+
+        .logo small {
+            display: block;
+            font-size: .66rem;
+            font-weight: 400;
+            color: var(--muted);
+            letter-spacing: .04em;
+            margin-top: -3px
+        }
+
+        nav ul {
+            display: flex;
+            gap: 1.7rem;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            font-size: .93rem;
+            font-weight: 500
+        }
+
+        nav a:hover {
+            color: var(--green)
+        }
+
+        .nav-cta {
+            display: flex;
+            align-items: center;
+            gap: .6rem
+        }
+
+        .nav-cta .btn {
+            padding: .55rem 1rem;
+            font-size: .9rem
+        }
+
+        .burger {
+            display: none;
+            background: none;
+            border: 1px solid var(--line);
+            border-radius: 10px;
+            width: 42px;
+            height: 42px;
+            color: var(--text);
+            cursor: pointer;
+            place-items: center;
+            font-size: 1.2rem
+        }
+
+        /* hero */
+        .hero {
+            position: relative;
+            overflow: hidden;
+            color: #fff;
+            padding: 5rem 0 6rem;
+            background: radial-gradient(1200px 500px at 85% -10%, rgba(22, 163, 74, .55), transparent 60%), linear-gradient(160deg, #0b2a4a 0%, #0d3b5c 55%, #0f5a3f 100%)
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            right: -120px;
+            top: 40px;
+            width: 460px;
+            height: 460px;
+            border: 2px dashed rgba(255, 255, 255, .14);
+            border-radius: 50%;
+            animation: spin 40s linear infinite
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            left: -80px;
+            bottom: -120px;
+            width: 320px;
+            height: 320px;
+            border-radius: 50%;
+            background: rgba(245, 179, 1, .1)
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg)
+            }
+        }
+
+        .hero-grid {
+            position: relative;
+            z-index: 1;
+            display: grid;
+            grid-template-columns: 1.15fr .85fr;
+            gap: 3rem;
+            align-items: center
+        }
+
+        .hero .tag {
+            background: rgba(255, 255, 255, .12);
+            color: #d8ffe6
+        }
+
+        .stars {
+            color: var(--gold);
+            letter-spacing: .2em;
+            font-size: .9rem;
+            margin: 1.2rem 0 .3rem
+        }
+
+        .hero h1 {
+            font-size: clamp(2.2rem, 6vw, 3.7rem);
+            letter-spacing: -.01em
+        }
+
+        .hero h1 span {
+            color: var(--gold)
+        }
+
+        .hero .sub {
+            font-size: 1.02rem;
+            color: #cfe3da;
+            margin: 1rem 0 1.8rem;
+            max-width: 520px
+        }
+
+        .hero-btns {
+            display: flex;
+            flex-wrap: wrap;
+            gap: .8rem
+        }
+
+        .checks {
+            display: flex;
+            flex-wrap: wrap;
+            gap: .6rem 1.4rem;
+            margin-top: 1.8rem;
+            font-size: .88rem;
+            color: #d4e8dd
+        }
+
+        .checks span {
+            display: inline-flex;
+            align-items: center;
+            gap: .4rem
+        }
+
+        .checks .i {
+            color: #6ee7a0
+        }
+
+        .card-hero {
+            background: rgba(255, 255, 255, .08);
+            border: 1px solid rgba(255, 255, 255, .18);
+            border-radius: 22px;
+            padding: 1.6rem;
+            backdrop-filter: blur(8px)
+        }
+
+        .card-hero h3 {
+            font-size: 1.15rem;
+            margin-bottom: .3rem
+        }
+
+        .card-hero p {
+            font-size: .88rem;
+            color: #cfe3da;
+            margin-bottom: 1rem
+        }
+
+        .cardrow {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: .7rem
+        }
+
+        .mini {
+            background: rgba(255, 255, 255, .1);
+            border-radius: 14px;
+            padding: .9rem;
+            display: flex;
+            flex-direction: column;
+            gap: .35rem;
+            font-size: .85rem
+        }
+
+        .mini .i {
+            font-size: 1.5rem;
+            color: var(--gold)
+        }
+
+        .mini b {
+            font-weight: 500
+        }
+
+        /* strip */
+        .strip {
+            margin-top: -2.6rem;
+            position: relative;
+            z-index: 2;
+            padding: 0
+        }
+
+        .strip-in {
+            background: var(--surface);
+            border: 1px solid var(--line);
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            padding: 1.4rem 1rem
+        }
+
+        .stat {
+            text-align: center;
+            padding: .3rem .5rem;
+            border-right: 1px solid var(--line)
+        }
+
+        .stat:last-child {
+            border: 0
+        }
+
+        .stat strong {
+            display: block;
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: var(--green)
+        }
+
+        .stat span {
+            font-size: .84rem;
+            color: var(--muted)
+        }
+
+        /* grids */
+        .grid4 {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.3rem
+        }
+
+        .card {
+            background: var(--surface);
+            border: 1px solid var(--line);
+            border-radius: 18px;
+            padding: 1.7rem 1.4rem;
+            transition: transform .25s, box-shadow .25s, border-color .25s
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+            border-color: var(--green)
+        }
+
+        .ico {
+            width: 54px;
+            height: 54px;
+            border-radius: 15px;
+            display: grid;
+            place-items: center;
+            font-size: 1.5rem;
+            color: #fff;
+            background: linear-gradient(135deg, var(--green), var(--green-d));
+            margin-bottom: 1.1rem
+        }
+
+        .card:nth-child(2n) .ico {
+            background: linear-gradient(135deg, #1e6fb8, var(--navy))
+        }
+
+        .card h3 {
+            font-size: 1.06rem;
+            margin-bottom: .45rem
+        }
+
+        .card p {
+            font-size: .92rem;
+            color: var(--muted)
+        }
+
+        /* process */
+        .alt {
+            background: linear-gradient(180deg, rgba(22, 163, 74, .06), rgba(22, 163, 74, .02))
+        }
+
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.3rem;
+            counter-reset: s;
+            position: relative
+        }
+
+        .step {
+            position: relative;
+            text-align: center;
+            padding: 0 .6rem
+        }
+
+        .step .num {
+            width: 64px;
+            height: 64px;
+            margin: 0 auto 1rem;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            font-size: 1.5rem;
+            color: #fff;
+            background: var(--navy);
+            box-shadow: 0 0 0 6px rgba(11, 42, 74, .12);
+            position: relative;
+            z-index: 1
+        }
+
+        .step:not(:last-child)::after {
+            content: "";
+            position: absolute;
+            top: 32px;
+            left: calc(50% + 40px);
+            width: calc(100% - 80px + 1.3rem);
+            border-top: 2px dashed var(--green);
+            opacity: .5
+        }
+
+        .step h3 {
+            font-size: 1.02rem;
+            margin-bottom: .4rem
+        }
+
+        .step p {
+            font-size: .9rem;
+            color: var(--muted)
+        }
+
+        /* about */
+        .about {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center
+        }
+
+        .about h2 {
+            font-size: clamp(1.6rem, 3.6vw, 2.2rem);
+            margin: .9rem 0 1rem
+        }
+
+        .about p {
+            color: var(--muted);
+            margin-bottom: 1rem
+        }
+
+        .list {
+            list-style: none;
+            padding: 0;
+            margin: 1.2rem 0 0;
+            display: grid;
+            gap: .7rem
+        }
+
+        .list li {
+            display: flex;
+            gap: .7rem;
+            align-items: flex-start;
+            font-size: .95rem
+        }
+
+        .list .i {
+            color: var(--green);
+            margin-top: .25rem
+        }
+
+        .panel {
+            border-radius: 24px;
+            padding: 2rem;
+            color: #fff;
+            background: linear-gradient(150deg, var(--navy), #0f5a3f);
+            box-shadow: var(--shadow);
+            position: relative;
+            overflow: hidden
+        }
+
+        .panel::after {
+            content: "";
+            position: absolute;
+            right: -60px;
+            bottom: -60px;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, .08)
+        }
+
+        .panel .big {
+            font-size: 3.2rem;
+            color: var(--gold);
+            line-height: 1
+        }
+
+        .panel h3 {
+            margin: .8rem 0 .5rem;
+            font-size: 1.3rem
+        }
+
+        .panel p {
+            color: #d3e6dc;
+            font-size: .94rem
+        }
+
+        .docs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: .5rem;
+            margin-top: 1.2rem;
+            position: relative;
+            z-index: 1
+        }
+
+        .docs span {
+            background: rgba(255, 255, 255, .12);
+            border-radius: 99px;
+            padding: .3rem .8rem;
+            font-size: .8rem
+        }
+
+        /* contact */
+        .contact {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            align-items: start
+        }
+
+        .cbox {
+            background: var(--surface);
+            border: 1px solid var(--line);
+            border-radius: 22px;
+            padding: 2rem;
+            box-shadow: var(--shadow)
+        }
+
+        .cbox h3 {
+            font-size: 1.3rem;
+            margin-bottom: .4rem
+        }
+
+        .cbox>p {
+            color: var(--muted);
+            font-size: .93rem;
+            margin-bottom: 1.3rem
+        }
+
+        .phone-big {
+            display: flex;
+            align-items: center;
+            gap: .8rem;
+            font-size: clamp(1.5rem, 4vw, 2rem);
+            font-weight: 600;
+            color: var(--green);
+            margin-bottom: 1.2rem
+        }
+
+        .cbtns {
+            display: flex;
+            flex-wrap: wrap;
+            gap: .7rem
+        }
+
+        form {
+            display: grid;
+            gap: .85rem
+        }
+
+        label {
+            font-size: .85rem;
+            font-weight: 500;
+            display: grid;
+            gap: .35rem
+        }
+
+        input,
+        select {
+            font: 400 .95rem 'Poppins', sans-serif;
+            padding: .8rem .95rem;
+            border-radius: 12px;
+            border: 1px solid var(--line);
+            background: var(--bg);
+            color: var(--text);
+            width: 100%
+        }
+
+        input:focus,
+        select:focus {
+            outline: 2px solid var(--green);
+            outline-offset: 1px
+        }
+
+        .note {
+            font-size: .78rem;
+            color: var(--muted)
+        }
+
+        /* footer */
+        footer {
+            background: var(--navy);
+            color: #c4d6e6;
+            padding: 2.5rem 0 5.5rem;
+            font-size: .9rem
+        }
+
+        .foot {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 1.5rem;
+            align-items: center
+        }
+
+        footer .logo {
+            color: #fff
+        }
+
+        footer .tagline {
+            color: #6ee7a0;
+            font-size: .88rem
+        }
+
+        .copy {
+            margin-top: 1.6rem;
+            padding-top: 1.2rem;
+            border-top: 1px solid rgba(255, 255, 255, .12);
+            font-size: .82rem;
+            text-align: center
+        }
+
+        /* floating */
+        .float {
+            position: fixed;
+            right: max(1rem, env(safe-area-inset-right, 0px));
+            bottom: calc(1rem + env(safe-area-inset-bottom, 0px));
+            display: flex;
+            flex-direction: column;
+            gap: .7rem;
+            z-index: 60
+        }
+
+        .fab {
+            width: 54px;
+            height: 54px;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            font-size: 1.5rem;
+            color: #fff;
+            box-shadow: 0 8px 22px rgba(0, 0, 0, .28);
+            transition: transform .2s
+        }
+
+        .fab:hover {
+            transform: scale(1.08)
+        }
+
+        .fab.call {
+            background: var(--navy);
+            animation: pulse 2.4s infinite
+        }
+
+        .fab.wa {
+            background: var(--wa);
+            color: #05361a
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(11, 42, 74, .5)
+            }
+
+            70% {
+                box-shadow: 0 0 0 16px rgba(11, 42, 74, 0)
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(11, 42, 74, 0)
+            }
+        }
+
+        #bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            z-index: 100;
+            background: linear-gradient(90deg, var(--green), var(--gold));
+            transform: scaleX(0);
+            transform-origin: left
+        }
+
+        @keyframes up {
+            from {
+                opacity: 0;
+                transform: translateY(26px)
+            }
+
+            to {
+                opacity: 1;
+                transform: none
+            }
+        }
+
+        @keyframes floaty {
+
+            0%,
+            100% {
+                transform: translateY(0)
+            }
+
+            50% {
+                transform: translateY(-12px)
+            }
+        }
+
+        @keyframes shine {
+            to {
+                background-position: 200% 0
+            }
+        }
+
+        @keyframes sweep {
+            0% {
+                left: -70%
+            }
+
+            60%,
+            100% {
+                left: 140%
+            }
+        }
+
+        @keyframes rise {
+            0% {
+                transform: translateY(0) rotate(0);
+                opacity: 0
+            }
+
+            15% {
+                opacity: 1
+            }
+
+            100% {
+                transform: translateY(-120vh) rotate(360deg);
+                opacity: 0
+            }
+        }
+
+        @keyframes twinkle {
+
+            0%,
+            100% {
+                opacity: 1;
+                transform: scale(1)
+            }
+
+            50% {
+                opacity: .35;
+                transform: scale(.7)
+            }
+        }
+
+        @keyframes ping {
+            0% {
+                box-shadow: 0 0 0 0 rgba(22, 163, 74, .45)
+            }
+
+            100% {
+                box-shadow: 0 0 0 16px rgba(22, 163, 74, 0)
+            }
+        }
+
+        @keyframes mq {
+            to {
+                transform: translateX(-50%)
+            }
+        }
+
+        .hero-grid>div:first-child>* {
+            animation: up .8s both
+        }
+
+        .hero-grid>div:first-child>*:nth-child(2) {
+            animation-delay: .1s
+        }
+
+        .hero-grid>div:first-child>*:nth-child(3) {
+            animation-delay: .2s
+        }
+
+        .hero-grid>div:first-child>*:nth-child(4) {
+            animation-delay: .3s
+        }
+
+        .hero-grid>div:first-child>*:nth-child(5) {
+            animation-delay: .4s
+        }
+
+        .hero-grid>div:first-child>*:nth-child(6) {
+            animation-delay: .5s
+        }
+
+        .hero-grid>div:first-child>*:nth-child(7) {
+            animation-delay: .6s
+        }
+
+        .hero-grid>div:first-child>*:nth-child(8) {
+            animation-delay: .7s
+        }
+
+        .card-hero {
+            animation: up .9s .3s both, floaty 6s 1.2s ease-in-out infinite
+        }
+
+        .hero h1 span {
+            background: linear-gradient(90deg, #f5b301, #fff3b0, #f5b301);
+            background-size: 200% 100%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: shine 3.5s linear infinite
+        }
+
+        .stars i {
+            font-style: normal;
+            display: inline-block;
+            animation: twinkle 1.8s ease-in-out infinite
+        }
+
+        .rot {
+            color: #d8ffe6;
+            font-size: 1rem;
+            margin-bottom: 1.4rem
+        }
+
+        .rot b {
+            color: var(--gold);
+            font-weight: 500;
+            display: inline-block;
+            transition: opacity .3s, transform .3s
+        }
+
+        .leaves {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            overflow: hidden
+        }
+
+        .leaves i {
+            position: absolute;
+            bottom: -40px;
+            font-style: normal;
+            color: rgba(255, 255, 255, .2);
+            font-size: 1.6rem;
+            animation: rise 13s linear infinite
+        }
+
+        .btn {
+            position: relative;
+            overflow: hidden
+        }
+
+        .btn-call::after,
+        .btn-wa::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -70%;
+            width: 45%;
+            height: 100%;
+            background: linear-gradient(100deg, transparent, rgba(255, 255, 255, .5), transparent);
+            transform: skewX(-20deg);
+            animation: sweep 3.6s infinite
+        }
+
+        .logo-badge .i {
+            animation: spin 12s linear infinite
+        }
+
+        .ico {
+            transition: transform .3s
+        }
+
+        .card:hover .ico {
+            transform: rotate(-8deg) scale(1.12)
+        }
+
+        .step .num {
+            animation: ping 2.2s infinite
+        }
+
+        .step:nth-child(2) .num {
+            animation-delay: .5s
+        }
+
+        .step:nth-child(3) .num {
+            animation-delay: 1s
+        }
+
+        .step:nth-child(4) .num {
+            animation-delay: 1.5s
+        }
+
+        .panel .big {
+            display: inline-block;
+            animation: spin 10s linear infinite
+        }
+
+        .fab.wa {
+            animation: floaty 3s ease-in-out infinite
+        }
+
+        .marq {
+            overflow: hidden;
+            background: var(--navy);
+            color: #d7ebe0;
+            padding: .85rem 0;
+            margin-top: 2.5rem;
+            font-size: .92rem
+        }
+
+        .track {
+            display: flex;
+            width: max-content;
+            animation: mq 30s linear infinite
+        }
+
+        .track span {
+            white-space: nowrap;
+            padding-right: 2.4rem
+        }
+
+        .track span::before {
+            content: "\2726";
+            color: var(--gold);
+            margin-right: .7rem
+        }
+
+        .shot:nth-child(odd) .pic {
+            animation: none
+        }
+
+        .rv {
+            opacity: 0;
+            transform: translateY(22px);
+            transition: opacity .6s, transform .6s
+        }
+
+        .rv.in {
+            opacity: 1;
+            transform: none
+        }
+
+        .scene {
+            display: block;
+            width: 100%;
+            height: auto;
+            border-radius: 14px;
+            margin-bottom: 1.1rem
+        }
+
+        .drive {
+            animation: drive 8s linear infinite
+        }
+
+        @keyframes drive {
+            from {
+                transform: translateX(-140px)
+            }
+
+            to {
+                transform: translateX(420px)
+            }
+        }
+
+        .ring {
+            transform-origin: 200px 90px;
+            animation: spin 18s linear infinite
+        }
+
+        .gal {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.2rem
+        }
+
+        .shot {
+            margin: 0;
+            border-radius: 18px;
+            overflow: hidden;
+            border: 1px solid var(--line);
+            background: var(--surface);
+            box-shadow: var(--shadow)
+        }
+
+        .shot .pic {
+            overflow: hidden
+        }
+
+        .shot svg {
+            display: block;
+            width: 100%;
+            height: auto;
+            transition: transform .6s
+        }
+
+        .shot:hover svg {
+            transform: scale(1.07)
+        }
+
+        .shot figcaption {
+            padding: 1rem 1.1rem 1.2rem
+        }
+
+        .shot b {
+            display: block;
+            font-weight: 600;
+            font-size: 1rem;
+            margin-bottom: .2rem
+        }
+
+        .shot span {
+            font-size: .86rem;
+            color: var(--muted)
+        }
+
+        .faq {
+            max-width: 780px;
+            margin: 0 auto;
+            display: grid;
+            gap: .8rem
+        }
+
+        .faq details {
+            background: var(--surface);
+            border: 1px solid var(--line);
+            border-radius: 14px;
+            padding: 1rem 1.2rem
+        }
+
+        .faq summary {
+            cursor: pointer;
+            font-weight: 500;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            gap: 1rem;
+            align-items: center
+        }
+
+        .faq summary::-webkit-details-marker {
+            display: none
+        }
+
+        .faq summary::after {
+            content: "+";
+            font-size: 1.4rem;
+            color: var(--green);
+            line-height: 1;
+            transition: transform .25s
+        }
+
+        .faq details[open] summary::after {
+            transform: rotate(45deg)
+        }
+
+        .faq details[open] {
+            border-color: var(--green)
+        }
+
+        .faq p {
+            color: var(--muted);
+            font-size: .93rem;
+            margin-top: .7rem
+        }
+
+        .badges {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: .7rem;
+            margin-top: 2rem
+        }
+
+        .badges span {
+            display: inline-flex;
+            align-items: center;
+            gap: .45rem;
+            background: var(--surface);
+            border: 1px solid var(--line);
+            border-radius: 99px;
+            padding: .45rem 1rem;
+            font-size: .86rem
+        }
+
+        .badges .i {
+            color: var(--green)
+        }
+
+        @media (max-width:960px) {
+            .gal {
+                grid-template-columns: repeat(2, 1fr)
+            }
+
+            .grid4,
+            .steps {
+                grid-template-columns: repeat(2, 1fr)
+            }
+
+            .step:not(:last-child)::after {
+                display: none
+            }
+
+            .steps {
+                gap: 2rem 1.3rem
+            }
+
+            .hero-grid,
+            .about,
+            .contact {
+                grid-template-columns: 1fr
+            }
+
+            .strip-in {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem 0
+            }
+
+            .stat:nth-child(2) {
+                border: 0
+            }
+
+            nav {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--surface);
+                border-bottom: 1px solid var(--line);
+                display: none;
+                padding: 1rem 1.5rem
+            }
+
+            nav.open {
+                display: block
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 1rem
+            }
+
+            .burger {
+                display: grid
+            }
+
+            .nav-cta .btn-call span {
+                display: none
+            }
+        }
+
+        @media (max-width:560px) {
+            section {
+                padding: 3.4rem 0
+            }
+
+            .hero {
+                padding: 3.2rem 0 5.5rem
+            }
+
+            .grid4,
+            .steps,
+            .gal {
+                grid-template-columns: 1fr
+            }
+
+            .cardrow {
+                grid-template-columns: 1fr 1fr
+            }
+
+            .hero-btns .btn {
+                flex: 1 1 100%
+            }
+
+            .nav-cta .btn-call {
+                padding: .55rem .8rem
+            }
+
+            .logo small {
+                display: none
+            }
+        }
+
+        @media (prefers-reduced-motion:reduce) {
+            * {
+                animation: none !important;
+                transition: none !important
+            }
+
+            .rv {
+                opacity: 1;
+                transform: none
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="bar"></div>
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+        <defs>
+            <symbol id="phone" viewBox="0 0 24 24">
+                <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z" />
+            </symbol>
+            <symbol id="wa" viewBox="0 0 24 24">
+                <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22z" />
+                <path d="M9 10c0 3 2 5 5 5l1.2-1.4-2-1-.8.8c-.8-.4-1.4-1-1.8-1.8l.8-.8-1-2z" />
+            </symbol>
+            <symbol id="car" viewBox="0 0 24 24">
+                <path
+                    d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2" />
+                <circle cx="7" cy="17" r="2" />
+                <path d="M9 17h6" />
+                <circle cx="17" cy="17" r="2" />
+            </symbol>
+            <symbol id="truck" viewBox="0 0 24 24">
+                <path
+                    d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2M15 18H9M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.62l-3.48-4.35A1 1 0 0 0 17.52 8H14" />
+                <circle cx="17" cy="18" r="2" />
+                <circle cx="7" cy="18" r="2" />
+            </symbol>
+            <symbol id="recycle" viewBox="0 0 24 24">
+                <path d="M21 12a9 9 0 1 1-3-6.7L21 8M21 3v5h-5" />
+                <path d="M9 12l2 2 4-4" />
+            </symbol>
+            <symbol id="cert" viewBox="0 0 24 24">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                <path d="M14 2v6h6M9 15l2 2 4-4" />
+            </symbol>
+            <symbol id="shield" viewBox="0 0 24 24">
+                <path
+                    d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" />
+                <path d="m9 12 2 2 4-4" />
+            </symbol>
+            <symbol id="scale" viewBox="0 0 24 24">
+                <path
+                    d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1zM2 16l3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1zM7 21h10M12 3v18M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2" />
+            </symbol>
+            <symbol id="eye" viewBox="0 0 24 24">
+                <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z" />
+                <circle cx="12" cy="12" r="3" />
+            </symbol>
+            <symbol id="gov" viewBox="0 0 24 24">
+                <path d="M3 22h18M6 18v-7M10 18v-7M14 18v-7M18 18v-7M12 2 3 7h18z" />
+            </symbol>
+            <symbol id="check" viewBox="0 0 24 24">
+                <path d="M20 6 9 17l-5-5" />
+            </symbol>
+            <symbol id="pin" viewBox="0 0 24 24">
+                <path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0z" />
+                <circle cx="12" cy="10" r="3" />
+            </symbol>
+            <symbol id="menu" viewBox="0 0 24 24">
+                <path d="M4 6h16M4 12h16M4 18h16" />
+            </symbol>
+            <symbol id="x" viewBox="0 0 24 24">
+                <path d="M18 6 6 18M6 6l12 12" />
+            </symbol>
+            <symbol id="arrow" viewBox="0 0 24 24">
+                <path d="M5 12h14m-7-7 7 7-7 7" />
+            </symbol>
+            <symbol id="clock" viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="10" />
+                <path d="M12 6v6l4 2" />
+            </symbol>
+            <symbol id="carb" viewBox="0 0 120 50">
+                <path
+                    d="M6 36v-8c0-3 2-5 5-6l16-3 14-12c2-2 4-3 7-3h28c3 0 5 1 7 3l12 12 12 3c3 1 5 3 5 6v8c0 2-1 3-3 3H9c-2 0-3-1-3-3z"
+                    fill="currentColor" />
+                <path d="M42 22l10-10c1-1 2-1 3-1h12v11zM74 11h6c1 0 2 0 3 1l9 10H74z" fill="#cfe8ff" />
+                <circle cx="30" cy="40" r="9" fill="#1b1b1b" />
+                <circle cx="30" cy="40" r="4" fill="#9aa5b1" />
+                <circle cx="92" cy="40" r="9" fill="#1b1b1b" />
+                <circle cx="92" cy="40" r="4" fill="#9aa5b1" />
+            </symbol>
+        </defs>
+    </svg>
+
+    <header>
+        <div class="wrap nav">
+            <a href="#home" class="logo"><span class="logo-badge"><svg class="i">
+                        <use href="#recycle" />
+                    </svg></span><span>RVSF Seven Star<small>Vehicle Scrapping Facility</small></span></a>
+            <nav id="menu" aria-label="Main">
+                <ul>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#why">Why Us</a></li>
+                    <li><a href="#process">Process</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="nav-cta">
+                <a class="btn btn-call" href="tel:+919926856000"><svg class="i">
+                        <use href="#phone" />
+                    </svg><span>Call Now</span></a>
+                <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><svg class="i">
+                        <use href="#menu" />
+                    </svg></button>
+            </div>
+        </div>
+    </header>
+
+    <main id="home">
+        <div class="hero">
+            <div class="leaves" aria-hidden="true"><i style="left:6%;animation-delay:0s">♻</i><i
+                    style="left:22%;animation-delay:3s;font-size:1.1rem">♻</i><i
+                    style="left:41%;animation-delay:6s">♻</i><i
+                    style="left:58%;animation-delay:1.5s;font-size:1.2rem">♻</i><i
+                    style="left:76%;animation-delay:8s">♻</i><i
+                    style="left:92%;animation-delay:4.5s;font-size:1.1rem">♻</i></div>
+            <div class="wrap hero-grid">
+                <div>
+                    <span class="tag"><svg class="i">
+                            <use href="#recycle" />
+                        </svg>Clean India · Green India</span>
+                    <div class="stars" aria-label="Seven star"><i>★</i> <i style="animation-delay:.2s">★</i> <i
+                            style="animation-delay:.4s">★</i> <i style="animation-delay:.6s">★</i> <i
+                            style="animation-delay:.8s">★</i> <i style="animation-delay:1s">★</i> <i
+                            style="animation-delay:1.2s">★</i></div>
+                    <h1>RVSF <span>Seven Star</span></h1>
+                    <p style="font-size:1.1rem;margin-top:.5rem;color:#fff">Registered Vehicle Scrapping Facility</p>
+                    <p class="sub">Go Green… Drive Clean… Apni purani gaadi ko legal, safe aur eco-friendly tareeke se
+                        scrap karwayein aur paayein government approved scrapping certificate.</p>
+                    <p class="rot">Scrap karwayein apni <b id="rot">Car</b></p>
+                    <div class="hero-btns">
+                        <a class="btn btn-call" href="tel:+919926856000"><svg class="i">
+                                <use href="#phone" />
+                            </svg>Call: 9926856000</a>
+                        <a class="btn btn-wa"
+                            href="https://wa.me/919926856000?text=Hello%20RVSF%20Seven%20Star%2C%20mujhe%20apni%20gaadi%20scrap%20karwani%20hai."
+                            target="_blank" rel="noopener"><svg class="i">
+                                <use href="#wa" />
+                            </svg>Chat on WhatsApp</a>
+                    </div>
+                    <div class="checks">
+                        <span><svg class="i">
+                                <use href="#check" />
+                            </svg>Easy Process</span>
+                        <span><svg class="i">
+                                <use href="#check" />
+                            </svg>Eco-Friendly</span>
+                        <span><svg class="i">
+                                <use href="#check" />
+                            </svg>Legal &amp; Safe</span>
+                        <span><svg class="i">
+                                <use href="#check" />
+                            </svg>Govt. Approved</span>
+                    </div>
+                </div>
+                <div class="card-hero">
+                    <svg class="scene" viewBox="0 0 400 170" role="img" aria-label="Green road par chalti gaadi">
+                        <defs>
+                            <linearGradient id="sk" x1="0" y1="0" x2="0" y2="1">
+                                <stop offset="0" stop-color="#38bdf8" />
+                                <stop offset="1" stop-color="#d9f99d" />
+                            </linearGradient>
+                        </defs>
+                        <rect width="400" height="170" fill="url(#sk)" />
+                        <circle cx="330" cy="36" r="20" fill="#fde68a" />
+                        <path d="M0 110 Q90 70 190 105 T400 95 V170 H0z" fill="#4ade80" />
+                        <g fill="#15803d">
+                            <circle cx="40" cy="96" r="14" />
+                            <circle cx="350" cy="90" r="16" />
+                            <circle cx="305" cy="98" r="11" />
+                        </g>
+                        <rect y="120" width="400" height="50" fill="#475569" />
+                        <path d="M0 146h400" stroke="#fde047" stroke-width="3" stroke-dasharray="20 14" />
+                        <g class="drive">
+                            <use href="#carb" x="0" y="112" width="100" height="42" style="color:#22c55e" />
+                        </g>
+                    </svg>
+                    <h3>Scrap Your Old Vehicle</h3>
+                    <p>For a greener tomorrow – ek call me poora kaam.</p>
+                    <div class="cardrow">
+                        <div class="mini"><svg class="i">
+                                <use href="#car" />
+                            </svg><b>Car Scrapping</b></div>
+                        <div class="mini"><svg class="i">
+                                <use href="#truck" />
+                            </svg><b>Vehicle Pickup</b></div>
+                        <div class="mini"><svg class="i">
+                                <use href="#recycle" />
+                            </svg><b>Eco Disposal</b></div>
+                        <div class="mini"><svg class="i">
+                                <use href="#cert" />
+                            </svg><b>Certificate</b></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="wrap strip">
+            <div class="strip-in rv">
+                <div class="stat"><strong data-n="100" data-s="%">0%</strong><span>Legal Process</span></div>
+                <div class="stat"><strong data-n="7" data-s="★">0★</strong><span>Seven Star Service</span></div>
+                <div class="stat"><strong>Free</strong><span>Vehicle Pickup</span></div>
+                <div class="stat"><strong>Govt.</strong><span>Approved Facility</span></div>
+            </div>
+        </div>
+
+        <div class="marq" aria-hidden="true">
+            <div class="track"><span>Car Scrapping</span><span>Free Vehicle Pickup</span><span>Eco-Friendly
+                    Disposal</span><span>Scrapping Certificate</span><span>Legal &amp; Safe</span><span>Government
+                    Approved</span><span>Go Green… Drive Clean…</span><span>Clean India Green India</span><span>Car
+                    Scrapping</span><span>Free Vehicle Pickup</span><span>Eco-Friendly Disposal</span><span>Scrapping
+                    Certificate</span><span>Legal &amp; Safe</span><span>Government Approved</span><span>Go Green… Drive
+                    Clean…</span><span>Clean India Green India</span></div>
+        </div>
+
+        <section id="services">
+            <div class="wrap">
+                <div class="sec-head rv"><span class="tag">Our Services</span>
+                    <h2>Hum kya-kya karte hain</h2>
+                    <p>Gaadi scrap karwane se lekar certificate milne tak, sab kuch ek hi jagah.</p>
+                </div>
+                <div class="grid4">
+                    <div class="card rv">
+                        <div class="ico"><svg class="i">
+                                <use href="#car" />
+                            </svg></div>
+                        <h3>Car Scrapping</h3>
+                        <p>Car, jeep, van aur dusri gaadiyon ki safe aur proper scrapping.</p>
+                    </div>
+                    <div class="card rv">
+                        <div class="ico"><svg class="i">
+                                <use href="#truck" />
+                            </svg></div>
+                        <h3>Vehicle Pickup</h3>
+                        <p>Aapki gaadi ko ghar ya office se hamari team pickup karti hai.</p>
+                    </div>
+                    <div class="card rv">
+                        <div class="ico"><svg class="i">
+                                <use href="#recycle" />
+                            </svg></div>
+                        <h3>Eco-Friendly Disposal</h3>
+                        <p>Environment ko dhyan me rakh kar scientific tareeke se recycling.</p>
+                    </div>
+                    <div class="card rv">
+                        <div class="ico"><svg class="i">
+                                <use href="#cert" />
+                            </svg></div>
+                        <h3>Scrapping Certificate</h3>
+                        <p>Scrapping ke baad official Certificate of Deposit aapko diya jata hai.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="why" class="alt">
+            <div class="wrap">
+                <div class="sec-head rv"><span class="tag">Why Choose Us</span>
+                    <h2>RVSF Seven Star kyun?</h2>
+                    <p>Bharosa, transparency aur sahi process – yahi hamari pehchaan hai.</p>
+                </div>
+                <div class="grid4">
+                    <div class="card rv">
+                        <div class="ico"><svg class="i">
+                                <use href="#shield" />
+                            </svg></div>
+                        <h3>Safe Process</h3>
+                        <p>Poora kaam trained staff aur safety standards ke saath hota hai.</p>
+                    </div>
+                    <div class="card rv">
+                        <div class="ico"><svg class="i">
+                                <use href="#scale" />
+                            </svg></div>
+                        <h3>Legal Process</h3>
+                        <p>Sab kuch rules aur government guidelines ke hisaab se.</p>
+                    </div>
+                    <div class="card rv">
+                        <div class="ico"><svg class="i">
+                                <use href="#eye" />
+                            </svg></div>
+                        <h3>Transparent Service</h3>
+                        <p>Koi hidden charges nahi, har step ki clear jaankari.</p>
+                    </div>
+                    <div class="card rv">
+                        <div class="ico"><svg class="i">
+                                <use href="#gov" />
+                            </svg></div>
+                        <h3>Government Approved</h3>
+                        <p>Registered Vehicle Scrapping Facility – officially approved.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="process">
+            <div class="wrap">
+                <div class="sec-head rv"><span class="tag">How It Works</span>
+                    <h2>Sirf 4 aasan steps</h2>
+                    <p>Na bhaag-daud, na jhanjhat. Hum sab sambhaal lete hain.</p>
+                </div>
+                <div class="steps">
+                    <div class="step rv">
+                        <div class="num"><svg class="i">
+                                <use href="#phone" />
+                            </svg></div>
+                        <h3>1. Contact Karein</h3>
+                        <p>Call ya WhatsApp par gaadi ki details bhejein.</p>
+                    </div>
+                    <div class="step rv">
+                        <div class="num"><svg class="i">
+                                <use href="#truck" />
+                            </svg></div>
+                        <h3>2. Vehicle Pickup</h3>
+                        <p>Hamari team aapki location se gaadi uthati hai.</p>
+                    </div>
+                    <div class="step rv">
+                        <div class="num"><svg class="i">
+                                <use href="#recycle" />
+                            </svg></div>
+                        <h3>3. Safe Scrapping</h3>
+                        <p>Facility par eco-friendly tareeke se scrapping.</p>
+                    </div>
+                    <div class="step rv">
+                        <div class="num"><svg class="i">
+                                <use href="#cert" />
+                            </svg></div>
+                        <h3>4. Certificate</h3>
+                        <p>Scrapping Certificate aapko mil jata hai.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery" class="alt">
+            <div class="wrap">
+                <div class="sec-head rv"><span class="tag">Gallery</span>
+                    <h2>Hamare kaam ki jhalak</h2>
+                    <p>Pickup se lekar recycling tak – poora process ek nazar me.</p>
+                </div>
+                <div class="gal">
+                    <figure class="shot rv">
+                        <div class="pic"><svg viewBox="0 0 400 260" role="img" aria-label="Vehicle pickup">
+                                <defs>
+                                    <linearGradient id="gA" x1="0" y1="0" x2="0" y2="1">
+                                        <stop offset="0" stop-color="#7dd3fc" />
+                                        <stop offset="1" stop-color="#e0f7ff" />
+                                    </linearGradient>
+                                </defs>
+                                <rect width="400" height="260" fill="url(#gA)" />
+                                <circle cx="330" cy="50" r="24" fill="#fde68a" />
+                                <path d="M0 190 Q100 150 200 185 T400 170 V260 H0z" fill="#86efac" />
+                                <rect y="200" width="400" height="60" fill="#475569" />
+                                <path d="M0 232h400" stroke="#fde047" stroke-width="3" stroke-dasharray="22 16" />
+                                <rect x="50" y="170" width="200" height="14" rx="3" fill="#1e293b" />
+                                <rect x="250" y="142" width="76" height="42" rx="7" fill="#16a34a" />
+                                <rect x="292" y="150" width="24" height="18" rx="3" fill="#cfe8ff" />
+                                <use href="#carb" x="72" y="112" width="150" height="62" style="color:#ef4444" />
+                                <g fill="#111">
+                                    <circle cx="90" cy="188" r="14" />
+                                    <circle cx="140" cy="188" r="14" />
+                                    <circle cx="290" cy="188" r="14" />
+                                </g>
+                                <g fill="#9aa5b1">
+                                    <circle cx="90" cy="188" r="5" />
+                                    <circle cx="140" cy="188" r="5" />
+                                    <circle cx="290" cy="188" r="5" />
+                                </g>
+                            </svg></div>
+                        <figcaption><b>Free Vehicle Pickup</b><span>Gaadi aapke darwaze se uthayi jati hai.</span>
+                        </figcaption>
+                    </figure>
+                    <figure class="shot rv">
+                        <div class="pic"><svg viewBox="0 0 400 260" role="img" aria-label="Scrapping yard">
+                                <defs>
+                                    <linearGradient id="gB" x1="0" y1="0" x2="0" y2="1">
+                                        <stop offset="0" stop-color="#93c5fd" />
+                                        <stop offset="1" stop-color="#e0f2fe" />
+                                    </linearGradient>
+                                </defs>
+                                <rect width="400" height="260" fill="url(#gB)" />
+                                <rect y="190" width="400" height="70" fill="#a8a29e" />
+                                <use href="#carb" x="6" y="160" width="96" height="40" style="color:#3b82f6" />
+                                <use href="#carb" x="104" y="160" width="96" height="40" style="color:#f59e0b" />
+                                <use href="#carb" x="14" y="205" width="96" height="40" style="color:#a855f7" />
+                                <use href="#carb" x="112" y="205" width="96" height="40" style="color:#ef4444" />
+                                <g transform="translate(225 100)">
+                                    <rect y="78" width="110" height="20" rx="10" fill="#1f2937" />
+                                    <rect x="14" y="42" width="64" height="38" rx="5" fill="#facc15" />
+                                    <rect x="20" y="48" width="26" height="18" rx="3" fill="#cfe8ff" />
+                                    <path d="M72 50 L112 4 L150 50" stroke="#eab308" stroke-width="10" fill="none"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M142 48l22 6-8 16-18-8z" fill="#ca8a04" />
+                                </g>
+                            </svg></div>
+                        <figcaption><b>Scrapping Yard</b><span>Bada, surakshit aur organised facility.</span>
+                        </figcaption>
+                    </figure>
+                    <figure class="shot rv">
+                        <div class="pic"><svg viewBox="0 0 400 260" role="img" aria-label="Car crushing">
+                                <rect width="400" height="260" fill="#334155" />
+                                <rect y="215" width="400" height="45" fill="#1e293b" />
+                                <rect x="188" y="20" width="24" height="80" fill="#94a3b8" />
+                                <rect x="70" y="100" width="260" height="26" rx="4" fill="#64748b" />
+                                <rect x="70" y="196" width="260" height="20" rx="4" fill="#475569" />
+                                <g transform="translate(100 158) scale(1.5 .72)">
+                                    <use href="#carb" width="120" height="50" style="color:#f97316" />
+                                </g>
+                                <g fill="#fde047">
+                                    <polygon points="60,170 78,164 70,178" />
+                                    <polygon points="340,172 322,166 330,180" />
+                                    <polygon points="52,150 66,148 60,158" />
+                                </g>
+                            </svg></div>
+                        <figcaption><b>Safe Scrapping</b><span>Trained team ke saath proper process.</span></figcaption>
+                    </figure>
+                    <figure class="shot rv">
+                        <div class="pic"><svg viewBox="0 0 400 260" role="img" aria-label="Green tomorrow">
+                                <defs>
+                                    <linearGradient id="gD" x1="0" y1="0" x2="0" y2="1">
+                                        <stop offset="0" stop-color="#bbf7d0" />
+                                        <stop offset="1" stop-color="#f0fdf4" />
+                                    </linearGradient>
+                                </defs>
+                                <rect width="400" height="260" fill="url(#gD)" />
+                                <path d="M0 200 Q110 160 220 195 T400 180 V260 H0z" fill="#4ade80" />
+                                <circle cx="200" cy="90" r="52" fill="#38bdf8" />
+                                <path
+                                    d="M170 70c10-14 28-10 30 2s-14 14-18 26-18 4-12-28zM214 98c10-6 22 2 18 14s-18 16-24 6 0-16 6-20z"
+                                    fill="#22c55e" />
+                                <circle class="ring" cx="200" cy="90" r="70" fill="none" stroke="#16a34a"
+                                    stroke-width="7" stroke-linecap="round" stroke-dasharray="110 40" />
+                                <g fill="#15803d">
+                                    <circle cx="50" cy="170" r="20" />
+                                    <circle cx="350" cy="165" r="24" />
+                                    <circle cx="315" cy="180" r="15" />
+                                </g>
+                                <g fill="#92400e">
+                                    <rect x="47" y="186" width="6" height="20" />
+                                    <rect x="346" y="186" width="8" height="24" />
+                                </g>
+                                <use href="#carb" x="140" y="190" width="120" height="50" style="color:#16a34a" />
+                            </svg></div>
+                        <figcaption><b>Greener Tomorrow</b><span>Recycling se saaf hawa, hara-bhara Bharat.</span>
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="badges rv"><span><svg class="i">
+                            <use href="#check" />
+                        </svg>Easy Process</span><span><svg class="i">
+                            <use href="#check" />
+                        </svg>Eco-Friendly</span><span><svg class="i">
+                            <use href="#check" />
+                        </svg>Legal &amp; Safe</span><span><svg class="i">
+                            <use href="#check" />
+                        </svg>Government Approved</span></div>
+            </div>
+        </section>
+
+        <section id="about">
+            <div class="wrap about">
+                <div class="rv">
+                    <span class="tag">About Us</span>
+                    <h2>Green future ki taraf ek kadam</h2>
+                    <p>RVSF Seven Star ek registered vehicle scrapping facility hai jahan purani aur end-of-life
+                        gaadiyon ko legal aur environment-friendly tareeke se scrap kiya jata hai. Hamara maqsad hai
+                        Bharat ko saaf aur hara-bhara banana.</p>
+                    <ul class="list">
+                        <li><svg class="i">
+                                <use href="#check" />
+                            </svg>Purani gaadi se chhutkara, bina tension ke</li>
+                        <li><svg class="i">
+                                <use href="#check" />
+                            </svg>Scrapping policy ke hisaab se poori guidance</li>
+                        <li><svg class="i">
+                                <use href="#check" />
+                            </svg>Paperwork me poori madad</li>
+                    </ul>
+                </div>
+                <div class="panel rv">
+                    <div class="big">♻</div>
+                    <h3>Scrap Your Old Vehicle For a Greener Tomorrow</h3>
+                    <p>Recycle today for a better tomorrow. Aaj hi gaadi scrap karwayein aur prakriti ko bachayein.</p>
+                    <div class="docs"><span>RC</span><span>ID Proof</span><span>Address Proof</span><span>Gaadi ki
+                            Chabi</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq" class="alt">
+            <div class="wrap">
+                <div class="sec-head rv"><span class="tag">FAQ</span>
+                    <h2>Aksar pooche jaane wale sawaal</h2>
+                </div>
+                <div class="faq rv">
+                    <details>
+                        <summary>Kaun si gaadi scrap karwa sakte hain?</summary>
+                        <p>Car, jeep, van, truck aur dusri gaadiyan jo end-of-life ho chuki hain. Apni gaadi ki details
+                            call ya WhatsApp par bhejein, hum guide karenge.</p>
+                    </details>
+                    <details>
+                        <summary>Kaun se documents chahiye?</summary>
+                        <p>Aam taur par RC, ID proof, address proof aur gaadi ki chabi. Exact list gaadi aur case ke
+                            hisaab se alag ho sakti hai, isliye pehle humse confirm kar lein.</p>
+                    </details>
+                    <details>
+                        <summary>Kya vehicle pickup ki suvidha hai?</summary>
+                        <p>Haan, hum vehicle pickup service dete hain. Location aur terms ke liye humse baat karein.</p>
+                    </details>
+                    <details>
+                        <summary>Scrapping certificate kya hota hai?</summary>
+                        <p>Gaadi scrap hone ke baad aapko Certificate of Deposit diya jata hai, jo proof hai ki gaadi
+                            legal tareeke se scrap ho chuki hai. Iske fayde scrappage policy ke hisaab se alag ho sakte
+                            hain.</p>
+                    </details>
+                    <details>
+                        <summary>Process me kitna time lagta hai?</summary>
+                        <p>Time gaadi aur paperwork par depend karta hai. Sahi time jaanne ke liye 9926856000 par call
+                            karein.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="wrap contact">
+                <div class="cbox rv">
+                    <h3>Humse Contact Karein</h3>
+                    <p>Koi sawaal ho ya gaadi scrap karwani ho – abhi call ya WhatsApp karein.</p>
+                    <a class="phone-big" href="tel:+919926856000"><svg class="i">
+                            <use href="#phone" />
+                        </svg>9926856000</a>
+                    <div class="cbtns">
+                        <a class="btn btn-call" href="tel:+919926856000"><svg class="i">
+                                <use href="#phone" />
+                            </svg>Call Now</a>
+                        <a class="btn btn-wa" href="https://wa.me/919926856000" target="_blank" rel="noopener"><svg
+                                class="i">
+                                <use href="#wa" />
+                            </svg>Chat on WhatsApp</a>
+                    </div>
+                </div>
+                <div class="cbox rv">
+                    <h3>Quick Enquiry</h3>
+                    <p>Form bharein, details seedhe WhatsApp par pahunch jayengi.</p>
+                    <form id="enq">
+                        <label>Aapka Naam<input id="n" required placeholder="Naam likhein"></label>
+                        <label>Gaadi ka Type
+                            <select id="t">
+                                <option>Car</option>
+                                <option>Jeep / SUV</option>
+                                <option>Van</option>
+                                <option>Truck / Commercial</option>
+                                <option>Bike / Scooter</option>
+                                <option>Other</option>
+                            </select></label>
+                        <label>Gaadi Number<input id="v" placeholder="MP 09 AB 1234"></label>
+                        <label>City / Location<input id="c" required placeholder="Aapka shehar"></label>
+                        <button class="btn btn-wa" type="submit"><svg class="i">
+                                <use href="#wa" />
+                            </svg>Send on WhatsApp</button>
+                        <span class="note">Submit karne par WhatsApp khulega.</span>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="wrap">
+            <div class="foot">
+                <div class="logo"><span class="logo-badge"><svg class="i">
+                            <use href="#recycle" />
+                        </svg></span><span>RVSF Seven Star<small>Registered Vehicle Scrapping Facility</small></span>
+                </div>
+                <div class="tagline">Go Green… Drive Clean…</div>
+                <a href="tel:+919926856000" style="display:inline-flex;gap:.5rem;align-items:center;color:#fff"><svg
+                        class="i">
+                        <use href="#phone" />
+                    </svg>9926856000</a>
+            </div>
+            <div class="copy">© <span id="yr">2026</span> RVSF Seven Star. All rights reserved.</div>
+        </div>
+    </footer>
+
+    <div class="float">
+        <a class="fab wa" href="https://wa.me/919926856000" target="_blank" rel="noopener" aria-label="WhatsApp"><svg
+                class="i">
+                <use href="#wa" />
+            </svg></a>
+        <a class="fab call" href="tel:+919926856000" aria-label="Call"><svg class="i">
+                <use href="#phone" />
+            </svg></a>
+    </div>
+
+    <script>
+        (function () {
+            var nav = document.getElementById('menu'), b = document.getElementById('burger');
+            function setIcon(o) {b.innerHTML = '<svg class="i"><use href="#' + (o ? 'x' : 'menu') + '"/></svg>'; b.setAttribute('aria-expanded', o)}
+            b.addEventListener('click', function () {setIcon(nav.classList.toggle('open'))});
+            nav.addEventListener('click', function (e) {if (e.target.tagName === 'A') {nav.classList.remove('open'); setIcon(false)} });
+            var els = document.querySelectorAll('.rv');
+            if ('IntersectionObserver' in window) {
+                var io = new IntersectionObserver(function (es) {es.forEach(function (e) {if (e.isIntersecting) {e.target.classList.add('in'); io.unobserve(e.target)} })}, {threshold: .12});
+                els.forEach(function (el, i) {el.style.transitionDelay = (i % 4) * 70 + 'ms'; io.observe(el)});
+            } else {els.forEach(function (el) {el.classList.add('in')})}
+            document.getElementById('yr').textContent = new Date().getFullYear();
+            var bar = document.getElementById('bar');
+            window.addEventListener('scroll', function () {var h = document.documentElement; bar.style.transform = 'scaleX(' + (h.scrollTop / ((h.scrollHeight - h.clientHeight) || 1)) + ')'}, {passive: true});
+            function count(el) {var n = +el.dataset.n, s = el.dataset.s || '', t0 = null; function f(t) {if (!t0) t0 = t; var p = Math.min((t - t0) / 1500, 1); el.textContent = Math.round(n * p) + s; if (p < 1) requestAnimationFrame(f)} requestAnimationFrame(f)}
+            var cn = document.querySelectorAll('[data-n]');
+            if ('IntersectionObserver' in window) {var io2 = new IntersectionObserver(function (es) {es.forEach(function (e) {if (e.isIntersecting) {count(e.target); io2.unobserve(e.target)} })}, {threshold: .6}); cn.forEach(function (el) {io2.observe(el)})} else {cn.forEach(function (el) {el.textContent = el.dataset.n + el.dataset.s})}
+            var words = ['Car', 'Jeep', 'Van', 'Truck', 'Bike'], wi = 0, r = document.getElementById('rot');
+            setInterval(function () {r.style.opacity = 0; r.style.transform = 'translateY(8px)'; setTimeout(function () {wi = (wi + 1) % words.length; r.textContent = words[wi]; r.style.opacity = 1; r.style.transform = 'none'}, 300)}, 2200);
+            document.getElementById('enq').addEventListener('submit', function (e) {
+                e.preventDefault();
+                var g = function (id) {return document.getElementById(id).value.trim()};
+                var m = 'Hello RVSF Seven Star,\nNaam: ' + g('n') + '\nGaadi Type: ' + g('t') + '\nGaadi Number: ' + (g('v') || '-') + '\nCity: ' + g('c') + '\nMujhe gaadi scrap karwani hai.';
+                window.open('https://wa.me/919926856000?text=' + encodeURIComponent(m), '_blank');
+            });
+        })();
+    </script>
+</body>
+
+</html>

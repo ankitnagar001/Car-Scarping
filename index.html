@@ -677,38 +677,241 @@
             gap: .7rem
         }
 
-        form {
+        /* contact highlights & poster card */
+        .contact-highlights {
+            margin-top: 1.5rem;
             display: grid;
-            gap: .85rem
+            gap: .75rem;
+            padding-top: 1.2rem;
+            border-top: 1px solid var(--line)
         }
 
-        label {
-            font-size: .85rem;
-            font-weight: 500;
-            display: grid;
-            gap: .35rem
-        }
-
-        input,
-        select {
-            font: 400 .95rem 'Poppins', sans-serif;
-            padding: .8rem .95rem;
-            border-radius: 12px;
-            border: 1px solid var(--line);
-            background: var(--bg);
+        .c-hl-item {
+            display: flex;
+            align-items: flex-start;
+            gap: .75rem;
+            font-size: .9rem;
             color: var(--text);
-            width: 100%
+            line-height: 1.45
         }
 
-        input:focus,
-        select:focus {
-            outline: 2px solid var(--green);
-            outline-offset: 1px
+        .c-hl-item .i {
+            color: var(--green);
+            flex-shrink: 0;
+            margin-top: 2px;
+            font-size: 1.15rem
         }
 
-        .note {
-            font-size: .78rem;
-            color: var(--muted)
+        .poster-cbox {
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+            transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+            position: relative;
+            overflow: hidden
+        }
+
+        .poster-cbox:hover {
+            transform: translateY(-4px);
+            border-color: var(--gold);
+            box-shadow: 0 16px 36px rgba(0, 0, 0, .12), 0 0 20px rgba(245, 179, 1, .2)
+        }
+
+        .poster-cbox-head {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 1rem
+        }
+
+        .poster-zoom-btn {
+            font-size: .8rem;
+            font-weight: 500;
+            color: var(--green);
+            background: var(--green-pale);
+            padding: .3rem .75rem;
+            border-radius: 99px;
+            border: 1px solid rgba(46, 125, 50, .2)
+        }
+
+        .poster-cbox-imgwrap {
+            border-radius: 14px;
+            overflow: hidden;
+            background: #0d1e17;
+            border: 1px solid var(--line);
+            max-height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center
+        }
+
+        .poster-card-img {
+            width: 100%;
+            height: auto;
+            max-height: 400px;
+            object-fit: cover;
+            object-position: top center;
+            display: block;
+            transition: transform .4s ease
+        }
+
+        .poster-cbox:hover .poster-card-img {
+            transform: scale(1.03)
+        }
+
+        .poster-cbox-foot {
+            margin-top: 1rem
+        }
+
+        .poster-cbox-foot h4 {
+            font-size: 1.1rem;
+            color: var(--text);
+            margin-bottom: .2rem
+        }
+
+        .poster-cbox-foot p {
+            font-size: .85rem;
+            color: var(--muted);
+            margin: 0
+        }
+
+        /* Hero Poster Wrap */
+        .hero-poster-wrap {
+            position: relative;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 16px 36px rgba(0, 0, 0, .35), 0 0 24px rgba(245, 179, 1, .3);
+            border: 2px solid rgba(245, 179, 1, .55);
+            cursor: pointer;
+            margin-bottom: 1.2rem;
+            background: #0d1e17;
+            transition: transform .3s ease, box-shadow .3s ease
+        }
+
+        .hero-poster-wrap:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 22px 46px rgba(0, 0, 0, .45), 0 0 32px rgba(245, 179, 1, .55)
+        }
+
+        .hero-poster-img {
+            width: 100%;
+            height: auto;
+            max-height: 420px;
+            object-fit: cover;
+            object-position: top center;
+            display: block;
+            transition: transform .4s ease
+        }
+
+        .hero-poster-wrap:hover .hero-poster-img {
+            transform: scale(1.025)
+        }
+
+        .poster-overlay-badge {
+            position: absolute;
+            bottom: 12px;
+            left: 12px;
+            right: 12px;
+            background: rgba(13, 30, 23, .9);
+            border: 1px solid rgba(245, 179, 1, .55);
+            border-radius: 99px;
+            padding: 7px 14px;
+            text-align: center;
+            color: #fde68a;
+            font-size: .82rem;
+            font-weight: 500;
+            backdrop-filter: blur(8px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, .3)
+        }
+
+        /* Lightbox Modal */
+        .pmodal {
+            position: fixed;
+            inset: 0;
+            background: rgba(8, 20, 15, .88);
+            backdrop-filter: blur(8px);
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity .25s ease
+        }
+
+        .pmodal.active {
+            opacity: 1;
+            pointer-events: auto
+        }
+
+        .pmodal-box {
+            position: relative;
+            background: #0f231c;
+            border: 2px solid var(--gold);
+            border-radius: 20px;
+            padding: .9rem;
+            max-width: 520px;
+            width: 100%;
+            max-height: 92vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: 0 25px 60px rgba(0, 0, 0, .65), 0 0 35px rgba(245, 179, 1, .35);
+            animation: pmodalZoom .25s ease
+        }
+
+        @keyframes pmodalZoom {
+            from {
+                transform: scale(.93);
+                opacity: 0
+            }
+            to {
+                transform: scale(1);
+                opacity: 1
+            }
+        }
+
+        .pmodal-close {
+            position: absolute;
+            top: -14px;
+            right: -14px;
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            background: var(--gold);
+            color: #0f231c;
+            border: none;
+            font-size: 1.6rem;
+            font-weight: bold;
+            line-height: 1;
+            cursor: pointer;
+            display: grid;
+            place-items: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, .4);
+            z-index: 10;
+            transition: transform .2s ease
+        }
+
+        .pmodal-close:hover {
+            transform: scale(1.1)
+        }
+
+        .pmodal-img {
+            max-width: 100%;
+            max-height: calc(92vh - 90px);
+            object-fit: contain;
+            border-radius: 12px;
+            display: block
+        }
+
+        .pmodal-actions {
+            display: flex;
+            gap: .8rem;
+            width: 100%;
+            margin-top: .8rem;
+            justify-content: center;
+            flex-wrap: wrap
         }
 
         /* footer */
@@ -1517,29 +1720,12 @@
                     </div>
                 </div>
                 <div class="card-hero">
-                    <svg class="scene" viewBox="0 0 400 170" role="img" aria-label="Green road par chalti gaadi">
-                        <defs>
-                            <linearGradient id="sk" x1="0" y1="0" x2="0" y2="1">
-                                <stop offset="0" stop-color="#38bdf8" />
-                                <stop offset="1" stop-color="#d9f99d" />
-                            </linearGradient>
-                        </defs>
-                        <rect width="400" height="170" fill="url(#sk)" />
-                        <circle cx="330" cy="36" r="20" fill="#fde68a" />
-                        <path d="M0 110 Q90 70 190 105 T400 95 V170 H0z" fill="#4ade80" />
-                        <g fill="#15803d">
-                            <circle cx="40" cy="96" r="14" />
-                            <circle cx="350" cy="90" r="16" />
-                            <circle cx="305" cy="98" r="11" />
-                        </g>
-                        <rect y="120" width="400" height="50" fill="#475569" />
-                        <path d="M0 146h400" stroke="#fde047" stroke-width="3" stroke-dasharray="20 14" />
-                        <g class="drive">
-                            <use href="#carb" x="0" y="112" width="100" height="42" style="color:#22c55e" />
-                        </g>
-                    </svg>
-                    <h3>Scrap Your Old Vehicle</h3>
-                    <p>For a greener tomorrow – ek call me poora kaam.</p>
+                    <div class="hero-poster-wrap" onclick="openPosterModal()" title="Bada dekhne ke liye click karein">
+                        <img src="images/rvsf-seven-star-banner.jpg" alt="RVSF Seven Star Registered Vehicle Scrapping Facility" class="hero-poster-img" loading="eager">
+                        <div class="poster-overlay-badge">
+                            <span>★ Govt. Approved Facility Poster • Click to view</span>
+                        </div>
+                    </div>
                     <div class="cardrow">
                         <div class="mini"><svg class="i">
                                 <use href="#car" />
@@ -1820,44 +2006,49 @@
         </section>
 
         <section id="contact">
-            <div class="wrap contact">
-                <div class="cbox rv">
-                    <h3>Humse Contact Karein</h3>
-                    <p>Koi sawaal ho ya gaadi scrap karwani ho – abhi call ya WhatsApp karein.</p>
-                    <a class="phone-big" href="tel:+919926856000"><svg class="i">
-                            <use href="#phone" />
-                        </svg>9926856000</a>
-                    <div class="cbtns">
-                        <a class="btn btn-call" href="tel:+919926856000"><svg class="i">
-                                <use href="#phone" />
-                            </svg>Call Now</a>
-                        <a class="btn btn-wa" href="https://wa.me/919926856000" target="_blank" rel="noopener"><svg
-                                class="i">
-                                <use href="#wa" />
-                            </svg>Chat on WhatsApp</a>
-                    </div>
+            <div class="wrap">
+                <div class="sec-head rv">
+                    <span class="tag">Contact Us</span>
+                    <h2>Humse Sampark Karein</h2>
+                    <p>Apni gaadi scrap karwane ke liye abhi call ya WhatsApp karein – turant response milega.</p>
                 </div>
-                <div class="cbox rv">
-                    <h3>Quick Enquiry</h3>
-                    <p>Form bharein, details seedhe WhatsApp par pahunch jayengi.</p>
-                    <form id="enq">
-                        <label>Aapka Naam<input id="n" required placeholder="Naam likhein"></label>
-                        <label>Gaadi ka Type
-                            <select id="t">
-                                <option>Car</option>
-                                <option>Jeep / SUV</option>
-                                <option>Van</option>
-                                <option>Truck / Commercial</option>
-                                <option>Bike / Scooter</option>
-                                <option>Other</option>
-                            </select></label>
-                        <label>Gaadi Number<input id="v" placeholder="MP 09 AB 1234"></label>
-                        <label>City / Location<input id="c" required placeholder="Aapka shehar"></label>
-                        <button class="btn btn-wa" type="submit"><svg class="i">
-                                <use href="#wa" />
-                            </svg>Send on WhatsApp</button>
-                        <span class="note">Submit karne par WhatsApp khulega.</span>
-                    </form>
+                <div class="contact">
+                    <div class="cbox rv">
+                        <span class="tag" style="margin-bottom:.8rem;display:inline-flex"><svg class="i"><use href="#phone" /></svg>Direct Helpline</span>
+                        <h3>Instant Assistance</h3>
+                        <p>Koi sawaal ho ya gaadi scrap karwani ho – turant call ya WhatsApp karein. Hamari dedicated team aapko best guidance aur fast service degi.</p>
+                        <a class="phone-big" href="tel:+919926856000"><svg class="i">
+                                <use href="#phone" />
+                            </svg>9926856000</a>
+                        <div class="cbtns">
+                            <a class="btn btn-call" href="tel:+919926856000"><svg class="i">
+                                    <use href="#phone" />
+                                </svg>Call Now</a>
+                            <a class="btn btn-wa" href="https://wa.me/919926856000?text=Hello%20RVSF%20Seven%20Star%2C%20mujhe%20apni%20gaadi%20scrap%20karwani%20hai." target="_blank" rel="noopener"><svg
+                                    class="i">
+                                    <use href="#wa" />
+                                </svg>Chat on WhatsApp</a>
+                        </div>
+                        <div class="contact-highlights">
+                            <div class="c-hl-item"><svg class="i"><use href="#check" /></svg><span><b>Free Doorstep Vehicle Pickup</b> – Ghar baithe gaadi uthwao</span></div>
+                            <div class="c-hl-item"><svg class="i"><use href="#check" /></svg><span><b>Govt. Approved Scrapping Certificate</b> (Certificate of Deposit)</span></div>
+                            <div class="c-hl-item"><svg class="i"><use href="#check" /></svg><span><b>100% Legal &amp; Safe Process</b> – RC cancellation guidance</span></div>
+                            <div class="c-hl-item"><svg class="i"><use href="#clock" /></svg><span><b>Facility Timings:</b> Mon – Sun: 9:00 AM – 8:00 PM (WhatsApp 24x7)</span></div>
+                        </div>
+                    </div>
+                    <div class="cbox rv poster-cbox" onclick="openPosterModal()" title="Bada dekhne ke liye click karein">
+                        <div class="poster-cbox-head">
+                            <span class="tag"><svg class="i"><use href="#cert" /></svg>Official Facility Poster</span>
+                            <span class="poster-zoom-btn">🔍 View Full Poster</span>
+                        </div>
+                        <div class="poster-cbox-imgwrap">
+                            <img src="images/rvsf-seven-star-banner.jpg" alt="RVSF Seven Star Registered Vehicle Scrapping Facility Poster" class="poster-card-img" loading="lazy">
+                        </div>
+                        <div class="poster-cbox-foot">
+                            <h4>RVSF Seven Star</h4>
+                            <p>Registered Vehicle Scrapping Facility • Go Green… Drive Clean…</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -1890,7 +2081,31 @@
             </svg></a>
     </div>
 
+    <!-- Lightbox Modal for Poster -->
+    <div id="posterModal" class="pmodal" onclick="if(event.target===this)closePosterModal()">
+        <div class="pmodal-box">
+            <button class="pmodal-close" onclick="closePosterModal()" aria-label="Close">&times;</button>
+            <img src="images/rvsf-seven-star-banner.jpg" alt="RVSF Seven Star Official Facility Poster" class="pmodal-img">
+            <div class="pmodal-actions">
+                <a class="btn btn-call" href="tel:+919926856000"><svg class="i"><use href="#phone"/></svg>Call: 9926856000</a>
+                <a class="btn btn-wa" href="https://wa.me/919926856000?text=Hello%20RVSF%20Seven%20Star%2C%20mujhe%20apni%20gaadi%20scrap%20karwani%20hai." target="_blank" rel="noopener"><svg class="i"><use href="#wa"/></svg>Chat on WhatsApp</a>
+            </div>
+        </div>
+    </div>
+
     <script>
+        function openPosterModal() {
+            var m = document.getElementById('posterModal');
+            if (m) { m.classList.add('active'); document.body.style.overflow = 'hidden'; }
+        }
+        function closePosterModal() {
+            var m = document.getElementById('posterModal');
+            if (m) { m.classList.remove('active'); document.body.style.overflow = ''; }
+        }
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') closePosterModal();
+        });
+
         (function () {
             var nav = document.getElementById('menu'), b = document.getElementById('burger');
             function setIcon(o) { b.innerHTML = '<svg class="i"><use href="#' + (o ? 'x' : 'menu') + '"/></svg>'; b.setAttribute('aria-expanded', o) }
@@ -1909,12 +2124,6 @@
             if ('IntersectionObserver' in window) { var io2 = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { count(e.target); io2.unobserve(e.target) } }) }, { threshold: .6 }); cn.forEach(function (el) { io2.observe(el) }) } else { cn.forEach(function (el) { el.textContent = el.dataset.n + el.dataset.s }) }
             var words = ['Car', 'Jeep', 'Van', 'Truck', 'Bike'], wi = 0, r = document.getElementById('rot');
             setInterval(function () { r.style.opacity = 0; r.style.transform = 'translateY(8px)'; setTimeout(function () { wi = (wi + 1) % words.length; r.textContent = words[wi]; r.style.opacity = 1; r.style.transform = 'none' }, 300) }, 2200);
-            document.getElementById('enq').addEventListener('submit', function (e) {
-                e.preventDefault();
-                var g = function (id) { return document.getElementById(id).value.trim() };
-                var m = 'Hello RVSF Seven Star,\nNaam: ' + g('n') + '\nGaadi Type: ' + g('t') + '\nGaadi Number: ' + (g('v') || '-') + '\nCity: ' + g('c') + '\nMujhe gaadi scrap karwani hai.';
-                window.open('https://wa.me/919926856000?text=' + encodeURIComponent(m), '_blank');
-            });
         })();
     </script>
 </body>
